@@ -54,7 +54,17 @@
 
 3.<title> </title> : 웹 사이트 제목
 
-4. <a> </a> : 링크 태그
+4. <a> </a> : 웹 페이지나 외부 사이트 연결
 
 5. <a href = "주소"> </a> : 링크
+
+6. <li> </li> : 글머리표 <ul> </ul> : 문장과 문장 사이를 띄워준다. <ol> </ol> : grouping <OL> + <li> : 숫자 글머리표
+
+7. <! doctype html> : 이 페이지를 html로 해석하라
+
+8. <script> </script> : 코드 삽입, 실행가능한 코드를 웹 페이지에 포함시키거나 참조한다. (보통 javascript 코드를 넣음)
+
+9. <link herf = "외부  CSS 파일 경로" rel="stylesheet"type=
+
+10.
 ```
