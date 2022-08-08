@@ -1,6 +1,6 @@
 <template>
     <div class="col-md-12">
-            <img id="profile-img" src="../assets/백경씨수정본.png" class="profile-img-card">
+            <img id="profile-img" src="../assets/백경씨수정본.png" >
             <Form @submit="handleLogin" :validation-schema="schema">
                 <div class="form-group">
                     <label for="username">Email</label>
@@ -81,4 +81,8 @@
         }
     };
 </script>
-<style scoped="scoped"></style>
+<style scoped>
+#profile-img{
+    width: 30rem;
+}
+</style>

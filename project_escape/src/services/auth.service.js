@@ -4,7 +4,7 @@ class AuthService {
     login(user) {
     return axios
     .post(API_URL + 'signin', {
-        username: user.username,
+        email: user.email,
         password: user.password
     })
     .then(response => {
@@ -19,6 +19,7 @@ class AuthService {
     }
     register(user) {
     return axios.post(API_URL + 'signup', {
+    laboratory: user.laboratory,
     username: user.username,
     email: user.email,
     password: user.password

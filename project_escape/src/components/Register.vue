@@ -1,30 +1,33 @@
 <template>
     <div class="col-md-12">
         <div class="card card-container">
-            <img
-                id="profile-img"
-                class="profile-img-card"/>
+                        <h1 id="title">Create Account</h1>
             <Form @submit="handleRegister" :validation-schema="schema">
                 <div v-if="!successful">
+                        <div class="form-group">
+                        <label for="laboratory">연구실</label>
+                        <Field name="laboratory" type="text" class="form-control"/>
+                        <ErrorMessage name="laboratory" class="error-feedback"/>
+                    </div>
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label for="username">이름</label>
                         <Field name="username" type="text" class="form-control"/>
                         <ErrorMessage name="username" class="error-feedback"/>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">이메일</label>
                         <Field name="email" type="email" class="form-control"/>
                         <ErrorMessage name="email" class="error-feedback"/>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">비밀번호</label>
                         <Field name="password" type="password" class="form-control"/>
                         <ErrorMessage name="password" class="error-feedback"/>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary btn-block" :disabled="loading">
                             <span v-show="loading" class="spinner-border spinner-border-sm"></span>
-                            Sign Up
+                            회원가입
                         </button>
                     </div>
                 </div>
@@ -52,6 +55,10 @@
             const schema = yup
                 .object()
                 .shape({
+                    laboratory: yup
+                        .string()
+                        .required("연구실을 선택하세요!"),
+
                     username: yup
                         .string()
                         .required("이름을 입력하시오")
@@ -105,5 +112,5 @@
         }
     };
 </script>
-<style scoped="scoped">
+<style scoped>
 </style>
