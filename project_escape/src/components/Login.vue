@@ -46,6 +46,8 @@
                     password: yup
                         .string()
                         .required("비밀번호를 입력하세요!")
+                        .min(8, "8자 이상 16자 미만의 비밀번호를 입력하세요.")
+                        .max(16, "8자 이상 16자 미만의 비밀번호를 입력하세요.")
                 });
             return {loading: false, message: "", schema};
         },
