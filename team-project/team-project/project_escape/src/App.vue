@@ -1,7 +1,11 @@
 <template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <div id="app">
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <a href="/" class="navbar-brand">초기화면</a>
+         <nav class="navbar navbar-expand  navbar-dark bg-primary">
+            <a href="/" classv class="navbar navbar-expand  navbar-dark bg-primary"></a>
+            <a href="/" class="navbar-brand"><img id="sme" src="./assets/sme.png"></a>
             <div class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <router-link to="/home" class="nav-link">
@@ -88,3 +92,36 @@
         }
     };
 </script>
+
+<style scoped>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+#sme {
+    width:59px;
+    height:63px;
+    top:1px
+}
+
+template { background: #2980B9;  
+    background: -webkit-linear-gradient(to top, #FFFFFF, #d3f3ff, rgb(158, 216, 255)); 
+    background: linear-gradient(to top, #FFFFFF, #d3f3ff, rgb(158, 216, 255));     
+}
+
+.container{
+    position: relative;
+    top:40px;
+}
+
+.navbar-brand{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 24px;
+}
+
+.navbar-expand  navbar-dark bg-primary {
+    height:50px;
+}
+
+nav {
+    height: 63px;
+}
+</style>

@@ -1,7 +1,9 @@
 <template>
     <div class="col-md-12">
         <div class="card card-container">
-                        <h1 id="title">Create Account</h1>
+                        <center><h1 id="title">Create Account</h1></center>
+                        <img id="hi" src="../assets/백경아하이.png">
+                        
             <Form @submit="handleRegister" :validation-schema="schema">
                 <div v-if="!successful">
                         <div class="form-group">
@@ -112,5 +114,52 @@
         }
     };
 </script>
+
 <style scoped>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+#title {
+    font-family: 'Do Hyeon', sans-serif;
+    color:#007BFF;
+    font-size:48px;
+    font-weight: 700;
+    width:450px;
+    height:100px;
+    position: relative;
+    right:18px;
+    top:25px;
+}
+
+div {
+    border-style:none;
+}
+
+.col-md-12{
+    width:480px;
+    position:relative;
+    left: 305px;
+    top:20px;
+    height:800px
+}
+
+.form-group{
+    height:90px;
+}
+
+label {
+    font-weight:525;
+}
+
+#hi {
+    width:75px;
+    height:85px;
+    position:absolute;
+    left: 373px;
+    top: 0.01em;;
+}
+
+:root { background: #2980B9;  
+    background: -webkit-linear-gradient(to top, #FFFFFF, #d3f3ff, rgb(158, 216, 255)); 
+    background: linear-gradient(to top, #FFFFFF, #d3f3ff, rgb(158, 216, 255));     
+}
 </style>

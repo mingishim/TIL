@@ -1,30 +1,21 @@
 <template>
 
-<!-- <div class="app">
-    <div v-if="state.account.id">
-      <p>안녕하세요? {{ state.account.name }}님!</p>
-      <button @click="logout()">로그아웃</button>
-    </div>
-    <div v-else>
-      <label for="loginId">
-        <span>아이디</span>
-        <input type="text" id="loginId" v-model="state.form.loginId" />
-      </label>
-      <label for="loginPw">
-        <span>패스워드</span>
-        <input type="password" id="loginPw" v-model="state.form.loginPw" />
-      </label>
-      <hr />
-      <button @click="submit()">로그인</button>
-    </div>
-    </div> -->
+<!-- <div class="app"> <div v-if="state.account.id"> <p>안녕하세요? {{
+state.account.name }}님!</p> <button @click="logout()">로그아웃</button> </div> <div
+v-else> <label for="loginId"> <span>아이디</span> <input type="text" id="loginId"
+v-model="state.form.loginId" /> </label> <label for="loginPw"> <span>패스워드</span>
+<input type="password" id="loginPw" v-model="state.form.loginPw" /> </label> <hr
+/> <button @click="submit()">로그인</button> </div> </div> -->
+
     <div class="col-md-12">
-            <img id="profile-img" src="../assets/백경씨수정본.png" >
+            <center><img id="profile-img" src="../assets/백경씨수정본.png" ></center>
             <Form @submit="handleLogin" :validation-schema="schema">
                 <div v-if="state.account.id">
-                    <p>안녕하세요? {{ state.account.lab }}교수님 연구실, {{ state.account.name }}학생님!</p>
-                    <button @click="logout()">로그아웃</button>
-                    <router-link to="/home">출퇴근 기록!</router-link>
+                    <center><p id="greeting">안녕하세요? {{ state.account.lab }}교수님 연구실 소속, {{ state.account.name }}학생님!
+                    </p></center>
+                    <center><router-link to="/home" id="router">출퇴근 기록</router-link></center>
+                    <br><br>
+                    <center>``<button id="logout" @click="logout()">로그아웃</button></center>
 
                 </div>
                 <div v-else>
@@ -105,8 +96,47 @@ export default {
     },
 };
 </script>
+
 <style scoped>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
 #profile-img{
     width: 30rem;
+    left:400px;
+}
+
+.form-group{
+    width:480px;
+    position:relative;
+    left: 305px;
+}
+
+button{
+    background-color: #007BFF;
+}
+
+template {
+    background-color: #2980B9;
+}
+
+#logout {
+    color:white;
+    background-color:rgb(125, 125, 255);
+    border:none;
+    height: 50px;
+    width:140px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#greeting {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+}
+
+#router {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size:30px;
 }
 </style>
