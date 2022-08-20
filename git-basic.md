@@ -58,7 +58,7 @@
 >
 > - 초기의 git 버전관리 할당 시에도 사용하고 파일이 수정된 후 버전을 새로 commit하기 전에도 add를 통해 할당시켜줘야 함
 
-> - add를 통해 stage에 commit 대기상태인 파일들이 있고 commit으로 버전 할당해주면 repository 에 올라가게 된다.  
+> - add를 통해 stage에 commit 대기상태인 파일들이 있고 commit으로 버전 할당해주면 repository 에 올라가게 된다.
 >   `git add -u` 수정되거나 삭제 등 update된 파일 모두 add
 
 # Git에서 과거로 돌아가는 두 방식
@@ -90,3 +90,4 @@ merge : 두 브랜치를 한 커밋에 이어붙임 (브랜치 사용내역을 �
 rebase : 브랜치를 다른 브랜치에 이어붙입니다. (한 줄로 깔끔히 정리될때 유용)
  #rebase를 할 경우 merge와는 다르게 남겨놓지 않을 브랜치로 switch한 상태에서 rebase를 한 이후 두 브랜치를 merge를 해줘야 한다. 그 이후 남겨놓지 않을 브랜치를 삭제한다.
 ```
+123
